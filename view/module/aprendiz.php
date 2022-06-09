@@ -28,14 +28,14 @@
               <i class="fa fa-times"></i></button>
           </div>
         </div>
-        <form method="post" id="frmUsuario">
+        <form method="post" id="frmAprendiz">
             <div class="box-body">
             <div class="row">
                 <div class="col-lg-6 col-xs-6">
                 <!-- texto box -->
                     <div class="input-group">
                         <span class="input-group-addon">Nombre</span>
-                        <input type="text" class="form-control" id="txtNombre" name="txtNombre">
+                        <input type="text" class="form-control" id="txtNombreAp" name="txtNombreAp">
                         <span class="input-group-addon">N</span>
                     </div>
                 </div>
@@ -44,8 +44,8 @@
                 <!-- texto box -->
                     <div class="input-group">
                         <span class="input-group-addon">Fecha Nacimiento</span>
-                        <input type="text" class="form-control" id="txtApellido" name="txtApellido">
-                        <span class="input-group-addon">A</span>
+                        <input type="date" class="form-control" id="txtFechan" name="txtFechan">
+                        <span class="input-group-addon"></span>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -56,7 +56,7 @@
                 <!-- texto box -->
                     <div class="input-group">
                         <span class="input-group-addon">Sexo</span>
-                        <input type="text" class="form-control" id="txtUsuario" name="txtUsuario">
+                        <input type="text" class="form-control" id="txtSexo" name="txtSexo">
                         <span class="input-group-addon"><i class="fa">S</i></span>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                 <!-- texto box -->
                     <div class="input-group">
                         <span class="input-group-addon">Ciudad</span>
-                        <input type="text" class="form-control" id="txtClave" name="txtClave" >
+                        <input type="text" class="form-control" id="txtCiudad" name="txtCiudad" >
                         <span class="input-group-addon"><i class="fa fa-building"></i></span>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
             <!-- /.box-body -->
             <div class="box-footer">
               
-                <button class="btn btn-app bg-blue" onclick="validate(event)">
+                <button class="btn btn-app bg-blue" onclick="validateA(event)">
                     <i class="fa fa-save "></i> Guardar
                 </button>
               
@@ -83,10 +83,10 @@
             <!-- /.box-footer-->
         </form>
         <?php
-          if (isset($_POST['txtNombre'])){
+          if (isset($_POST['txtNombreAp'])){
             $objCtrUser = new AprendizController();
             $objCtrUser -> setInsertAprendiz(
-              $_POST['txtNombreA'],
+              $_POST['txtNombreAp'],
               $_POST['txtFechan'],
               $_POST['txtSexo'],
               $_POST['txtCiudad']
@@ -141,7 +141,7 @@
                           <button class="btn btn-social-icon bg-yellow" onclick="getData(this.parentElement.parentElement)" data-toggle="modal" data-target="#myModal">
                             <i class="fa fa-edit"></i>
                           </button>
-                          <button class="btn btn-social-icon btn-google"  onClick="erase(this.parentElement.parentElement)">
+                          <button class="btn btn-social-icon btn-google"  onClick="erasea(this.parentElement.parentElement)">
                             <i class="fa fa-trash"></i>
                           </button>
                         </td>
@@ -172,7 +172,7 @@
 
       <!-- Modal Header -->
       <div class="modal-header bg bg-blue">
-        <h4 class="modal-title">Modificar Usuario</h4>
+        <h4 class="modal-title">Modificar Aprendiz</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
 
@@ -194,9 +194,9 @@
                 <div class="col-lg-6 col-xs-6">
                 <!-- texto box -->
                     <div class="input-group">
-                        <span class="input-group-addon">Apellido</span>
-                        <input type="text" class="form-control" id="txtApellidoM" name="txtApellidoM">
-                        <span class="input-group-addon">A</span>
+                        <span class="input-group-addon">Fecha Nacimiento</span> 
+                        <input type="date" class="form-control" id="txtApellidoM" name="txtApellidoM">
+                        <span class="input-group-addon"><A:link></A:link>/span>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -206,7 +206,7 @@
                 <div class="col-lg-6 col-xs-6">
                 <!-- texto box -->
                     <div class="input-group">
-                        <span class="input-group-addon">Usuario</span>
+                        <span class="input-group-addon">Sexo</span>
                         <input type="text" class="form-control" id="txtUsuarioM" name="txtUsuarioM">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
                     </div>
@@ -215,7 +215,7 @@
                 <div class="col-lg-6 col-xs-6">
                 <!-- texto box -->
                     <div class="input-group">
-                        <span class="input-group-addon">Clave</span>
+                        <span class="input-group-addon">Ciudad</span>
                         <input type="text" class="form-control" id="txtClaveM" name="txtClaveM" >
                         <span class="input-group-addon"><i class="fa fa-ambulance"></i></span>
                     </div>

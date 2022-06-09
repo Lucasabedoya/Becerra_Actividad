@@ -18,6 +18,9 @@
       case 'erase':
         include_once 'view/module/erase.php';
         break;
+      case 'erasea':
+        include_once 'view/module/erasea.php';
+        break;
       default:
         include_once 'view/module/presentation.php';
         break;

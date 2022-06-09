@@ -51,7 +51,9 @@
 <!-- AdminLTE for demo purposes -->
 <script src="view/dist/js/demo.js"></script>
 <script src="view/js/validate.js"></script>
+<script src="view/js/validateA.js"></script>
 <script src="view/js/crud.js"></script>
+<script src="view/js/crudA.js"></script>
 <script src="view/js/ohsnap.js"></script>
 <script src="view/js/TweenMax.min.js"></script>
 <script>
