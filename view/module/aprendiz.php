@@ -1,14 +1,14 @@
-  <input type="text" name="txtCodigo" id="txtCodigo">
+<input type="text" name="txtCodigo" id="txtCodigo">
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Usuarios
+        Aprendiz
       </h1>
       <ol class="breadcrumb">
         <li><a href="index.php"><i class="fa fa-user"></i> Home</a></li>
-        <li><a href="#">Usuario</a></li>
+        <li><a href="#">Aprendiz</a></li>
       </ol>
     </section>
 
@@ -43,7 +43,7 @@
                 <div class="col-lg-6 col-xs-6">
                 <!-- texto box -->
                     <div class="input-group">
-                        <span class="input-group-addon">Apellido</span>
+                        <span class="input-group-addon">Fecha Nacimiento</span>
                         <input type="text" class="form-control" id="txtApellido" name="txtApellido">
                         <span class="input-group-addon">A</span>
                     </div>
@@ -55,18 +55,18 @@
                 <div class="col-lg-6 col-xs-6">
                 <!-- texto box -->
                     <div class="input-group">
-                        <span class="input-group-addon">Usuario</span>
+                        <span class="input-group-addon">Sexo</span>
                         <input type="text" class="form-control" id="txtUsuario" name="txtUsuario">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <span class="input-group-addon"><i class="fa">S</i></span>
                     </div>
                 </div>
                 <!-- ./col -->
                 <div class="col-lg-6 col-xs-6">
                 <!-- texto box -->
                     <div class="input-group">
-                        <span class="input-group-addon">Clave</span>
+                        <span class="input-group-addon">Ciudad</span>
                         <input type="text" class="form-control" id="txtClave" name="txtClave" >
-                        <span class="input-group-addon"><i class="fa fa-ambulance"></i></span>
+                        <span class="input-group-addon"><i class="fa fa-building"></i></span>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -84,12 +84,12 @@
         </form>
         <?php
           if (isset($_POST['txtNombre'])){
-            $objCtrUser = new UserController();
-            $objCtrUser -> setInsertUser(
-              $_POST['txtNombre'],
-              $_POST['txtApellido'],
-              $_POST['txtUsuario'],
-              $_POST['txtClave']
+            $objCtrUser = new AprendizController();
+            $objCtrUser -> setInsertAprendiz(
+              $_POST['txtNombreA'],
+              $_POST['txtFechan'],
+              $_POST['txtSexo'],
+              $_POST['txtCiudad']
             );
           }
         ?>
@@ -112,31 +112,31 @@
                 <tr>
                   <th class="text-center">Codigo</th>
                   <th class="text-center">Nombre</th>
-                  <th class="text-center">Apellido</th>
-                  <th class="text-center">Usuario</th>
-                  <th class="text-center">Clave</th>
+                  <th class="text-center">Fecha Nacimiento</th>
+                  <th class="text-center">Sexo</th>
+                  <th class="text-center">Ciudad</th>
                   <th class="text-center">Acciones</th>
                 </tr>
               </thead>
               <tbody>
                 <form method="post">
                 <?php
-                  $objCtrUserAll = new UserController();
-                  if (gettype($objCtrUserAll -> getSearchAllUser()) == 'boolean'){
+                  $objCtrAprendizAll = new AprendizController();
+                  if (gettype($objCtrAprendizAll -> getSearchAllAprendiz()) == 'boolean'){
                     echo '
                     <tr>
                       <td colspan="5">no hay datos que mostrar</td>
                     </tr>';
                   }else{
                     
-                    foreach ($objCtrUserAll -> getSearchAllUser() as $key => $value) {
+                    foreach ($objCtrAprendizAll -> getSearchAllAprendiz() as $key => $value) {
                       echo '
                       <tr>
-                        <td>'.$value["CODE"].'</td>
-                        <td>'.$value["NAME"].'</td>
-                        <td>'.$value["LASTNAME"].'</td>
-                        <td>'.$value["USER"].'</td>
-                        <td>'.$value["PASSWORD"].'</td>
+                        <td>'.$value["CODEA"].'</td>
+                        <td>'.$value["NOMBRE"].'</td>
+                        <td>'.$value["FECHAN"].'</td>
+                        <td>'.$value["SEXO"].'</td>
+                        <td>'.$value["CIUDAD"].'</td>
                         <td class="text-center">
                           <button class="btn btn-social-icon bg-yellow" onclick="getData(this.parentElement.parentElement)" data-toggle="modal" data-target="#myModal">
                             <i class="fa fa-edit"></i>
