@@ -35,20 +35,20 @@ function erasea(obj){
             }
         })
     
-    
-
 
 }
-function getData(obj){
-    let nombre = obj.children[1].innerHTML;
-    let apellido = obj.children[2].innerHTML;
-    let usuario = obj.children[3].innerHTML;
-    let clave = obj.children[4].innerHTML;
-    let codigo = obj.children[0].innerHTML;
+function getDataA(obj){
 
-    document.getElementById("txtNombreM").value = nombre;
-    document.getElementById("txtApellidoM").value = apellido;
-    document.getElementById("txtUsuarioM").value = usuario;
-    document.getElementById("txtClaveM").value = clave;
-    document.getElementById("txtCodigoM").value = codigo;
+    let codigoa = obj.children[0].innerHTML;
+    let nombre = obj.children[1].innerHTML;
+    let fechan = obj.children[2].innerHTML;
+    let sexo = obj.children[3].innerHTML;
+    let ciudad = obj.children[4].innerHTML;
+
+    document.getElementById("txtCodigoAM").value = codigoa;
+    document.getElementById("txtNombreAM").value = nombre;
+    document.getElementById("txtFechanM").value = fechan;
+    document.getElementById("txtSexoM").value = sexo;
+    document.getElementById("txtCiudadM").value = ciudad;
+
 }

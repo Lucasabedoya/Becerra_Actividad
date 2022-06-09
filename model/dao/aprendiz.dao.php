@@ -63,6 +63,25 @@
             return $respon;
         }
 
+        public function mldUpdateAprendiz(){
+            $sql  = "CALL spUpdateAprendiz (?, ?, ?, ?, ?);";
+            $estado = false;
+            try {
+                $objCon = new Conexion();
+                $stmt = $objCon->getConect() -> prepare($sql);
+                $stmt ->  bindParam(1,  $this -> codea,      PDO::PARAM_INT);
+                $stmt ->  bindParam(2,  $this -> nombre,      PDO::PARAM_STR);
+                $stmt ->  bindParam(3,  $this -> fechan,  PDO::PARAM_STR);
+                $stmt ->  bindParam(4,  $this -> sexo,      PDO::PARAM_STR);
+                $stmt ->  bindParam(5,  $this -> ciudad,  PDO::PARAM_STR);
+    
+                $estado = $stmt -> execute();
+            } catch (PDOException $e) {
+                echo "Error al modfiicar usuarios " . $e ->getMessage();
+            }
+            return $estado;
+        }
+
     }
 
 ?>

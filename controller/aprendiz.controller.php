@@ -41,6 +41,29 @@
             return $respon;
         }//FIN DE MOSTRAR TODOS
 
+        public function setUpdateAprendiz($codea, $nombre, $fechan, $sexo, $ciudad){
+            try{
+                $objDtoAprendiz = new Aprendiz();
+                $objDtoAprendiz -> setCodea($codea);
+                $objDtoAprendiz -> setNombre($nombre);
+                $objDtoAprendiz -> setFechan($fechan);
+                $objDtoAprendiz -> setSexo($sexo);
+                $objDtoAprendiz -> setCiudad($ciudad);
+                $objDaoAprendiz = new AprendizModel($objDtoAprendiz);
+                if ($objDaoAprendiz -> mldUpdateAprendiz()){
+                    echo "<script>
+                    Swal.fire(
+                        'Actualizado!',
+                        'El registro ha sido actualizado',
+                        'success'
+                    )
+                </script>";
+                }
+            } catch(PDOException $e){
+                echo 'Error al modificara'.$e->getMessage();
+            }
 
+
+    }
     }
 ?>

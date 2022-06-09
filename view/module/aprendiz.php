@@ -45,7 +45,6 @@
                     <div class="input-group">
                         <span class="input-group-addon">Fecha Nacimiento</span>
                         <input type="date" class="form-control" id="txtFechan" name="txtFechan">
-                        <span class="input-group-addon"></span>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -138,7 +137,7 @@
                         <td>'.$value["SEXO"].'</td>
                         <td>'.$value["CIUDAD"].'</td>
                         <td class="text-center">
-                          <button class="btn btn-social-icon bg-yellow" onclick="getData(this.parentElement.parentElement)" data-toggle="modal" data-target="#myModal">
+                          <button class="btn btn-social-icon bg-yellow" onclick="getDataA(this.parentElement.parentElement)" data-toggle="modal" data-target="#myModal">
                             <i class="fa fa-edit"></i>
                           </button>
                           <button class="btn btn-social-icon btn-google"  onClick="erasea(this.parentElement.parentElement)">
@@ -178,15 +177,15 @@
 
       <!-- Modal body -->
       <div class="modal-body">
-        <form method="post" id="frmUsuarioModificar">
-          <input type="hidden" name="txtCodigoM" id="txtCodigoM">
+        <form method="post" id="frmAprendizModificar">
+          <input type="hidden" name="txtCodigoAM" id="txtCodigoAM">
           <div class="box-body">
             <div class="row">
                 <div class="col-lg-6 col-xs-6">
                 <!-- texto box -->
                     <div class="input-group">
                         <span class="input-group-addon">Nombre</span>
-                        <input type="text" class="form-control" id="txtNombreM" name="txtNombreM">
+                        <input type="text" class="form-control" id="txtNombreAM" name="txtNombreAM">
                         <span class="input-group-addon">N</span>
                     </div>
                 </div>
@@ -195,8 +194,7 @@
                 <!-- texto box -->
                     <div class="input-group">
                         <span class="input-group-addon">Fecha Nacimiento</span> 
-                        <input type="date" class="form-control" id="txtApellidoM" name="txtApellidoM">
-                        <span class="input-group-addon"><A:link></A:link>/span>
+                        <input type="date" class="form-control" id="txtFechanM" name="txtFechanM">
                     </div>
                 </div>
                 <!-- ./col -->
@@ -207,7 +205,7 @@
                 <!-- texto box -->
                     <div class="input-group">
                         <span class="input-group-addon">Sexo</span>
-                        <input type="text" class="form-control" id="txtUsuarioM" name="txtUsuarioM">
+                        <input type="text" class="form-control" id="txtSexoM" name="txtSexoM">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
                     </div>
                 </div>
@@ -216,8 +214,8 @@
                 <!-- texto box -->
                     <div class="input-group">
                         <span class="input-group-addon">Ciudad</span>
-                        <input type="text" class="form-control" id="txtClaveM" name="txtClaveM" >
-                        <span class="input-group-addon"><i class="fa fa-ambulance"></i></span>
+                        <input type="text" class="form-control" id="txtCiudadM" name="txtCiudadM">
+                        <span class="input-group-addon"><i class="fa fa-building"></i></span>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -232,20 +230,20 @@
       <!-- Modal footer -->
       <div class="modal-footer">
         <div>
-          <button class="btn btn-app float-left bg-blue" onclick="validateModify(event)">
+          <button class="btn btn-app float-left bg-blue" onclick="validateAModify(event)">
               <i class="fa fa-save"></i> Guardar
           </button>
           <?php
             if (isset($_POST['txtNombreM'])){
-              $objCtrUser = new UserController();
-              $objCtrUser -> setUpdateUser(
-                $_POST['txtCodigoM'],
-                $_POST['txtUsuarioM'],
-                $_POST['txtClaveM'],
-                $_POST['txtNombreM'],
-                $_POST['txtApellidoM']
+              $objCtrUser = new AprendizController();
+              $objCtrUser -> setUpdateAprendiz(
+                $_POST['txtCodigoAM'],
+                $_POST['txtsexoM'],
+                $_POST['txtCiudadM'],
+                $_POST['txtNombreAM'],
+                $_POST['txtFechanM']
               );
-              include_once 'view/module/user.php'; 
+              include_once 'view/module/aprendiz.php'; 
             }
           ?>
           <button class="btn btn-app bg-blue" data-dismiss="modal">
