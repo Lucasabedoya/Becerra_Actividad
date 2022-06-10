@@ -44,6 +44,7 @@
         public function setUpdateAprendiz($codea, $nombre, $fechan, $sexo, $ciudad){
             try{
                 $objDtoAprendiz = new Aprendiz();
+
                 $objDtoAprendiz -> setCodea($codea);
                 $objDtoAprendiz -> setNombre($nombre);
                 $objDtoAprendiz -> setFechan($fechan);
@@ -60,7 +61,7 @@
                 </script>";
                 }
             } catch(PDOException $e){
-                echo 'Error al modificara'.$e->getMessage();
+                echo 'Error al modificar'.$e->getMessage();
             }
 
 

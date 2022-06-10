@@ -77,7 +77,7 @@
     
                 $estado = $stmt -> execute();
             } catch (PDOException $e) {
-                echo "Error al modfiicar usuarios " . $e ->getMessage();
+                echo "Error al modfiicar aprendiz " . $e ->getMessage();
             }
             return $estado;
         }

@@ -1,4 +1,4 @@
-<input type="text" name="txtCodigo" id="txtCodigo">
+<input type="text" name="txtCodigoA" id="txtCodigoA">
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -234,7 +234,7 @@
               <i class="fa fa-save"></i> Guardar
           </button>
           <?php
-            if (isset($_POST['txtNombreM'])){
+            if (isset($_POST['txtNombreAM'])){
               $objCtrUser = new AprendizController();
               $objCtrUser -> setUpdateAprendiz(
                 $_POST['txtCodigoAM'],

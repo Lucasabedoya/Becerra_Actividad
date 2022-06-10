@@ -21,6 +21,9 @@
       case 'erasea':
         include_once 'view/module/erasea.php';
         break;
+      case 'erasem':
+        include_once 'view/module/erasem.php';
+        break;
       default:
         include_once 'view/module/presentation.php';
         break;

@@ -88,7 +88,7 @@ class UserController{
             </script>";
             }
         } catch(PDOException $e){
-            echo 'Error al modificara'.$e->getMessage();
+            echo 'Error al modificar'.$e->getMessage();
         }
   
     }//END UPDATE
