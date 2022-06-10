@@ -225,7 +225,7 @@
 
             <!-- /.box-footer-->
         </form>
-      </div>
+      </div>  
 
       <!-- Modal footer -->
       <div class="modal-footer">
@@ -238,7 +238,7 @@
               $objCtrUser = new AprendizController();
               $objCtrUser -> setUpdateAprendiz(
                 $_POST['txtCodigoAM'],
-                $_POST['txtsexoM'],
+                $_POST['txtSexoM'],
                 $_POST['txtCiudadM'],
                 $_POST['txtNombreAM'],
                 $_POST['txtFechanM']

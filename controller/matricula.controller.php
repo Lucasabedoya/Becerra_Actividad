@@ -40,9 +40,11 @@ class MatriculaController{
         }
         return $respon;
     }//FIN DE MOSTRAR TODOS
-    public function setUpdateMatricula($nombrec, $costo, $estado, $codepro, $codeapr, $fecham){
+    public function setUpdateMatricula($codem, $nombrec, $costo, $estado, $codepro, $codeapr, $fecham){
         try{
             $objDtoMatricula = new Matricula();
+
+            $objDtoMatricula -> setCodem($codem);
             $objDtoMatricula -> setNombrec($nombrec);
             $objDtoMatricula -> setCosto($costo);
             $objDtoMatricula -> setEstado($estado);

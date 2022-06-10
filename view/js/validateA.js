@@ -2,9 +2,9 @@ function validateA(e){
     e.preventDefault();
     formulario  = document.getElementById('frmAprendiz');
     nombre      = document.getElementById('txtNombreAp');
-    apellido    = document.getElementById('txtFechan');
-    usuario     = document.getElementById('txtSexo');
-    clave       = document.getElementById('txtCiudad');
+    fechan      = document.getElementById('txtFechan');
+    sexo        = document.getElementById('txtSexo');
+    ciudad      = document.getElementById('txtCiudad');
     
     lVali = true;
     
@@ -13,18 +13,18 @@ function validateA(e){
         ohSnap('Ingresar el nombre...', {color: 'red'});  // alert will have class 'alert-color'
         lVali = false;
     }
-    if (apellido.value==""){
-        apellido.style.borderColor="red";
+    if (fechan.value==""){
+        fechan.style.borderColor="red";
         ohSnap('Ingresar el fecha...', {color: 'red'},{duration:1000});  // alert will have class 'alert-color'
         lVali = false;
     }
-    if (usuario.value==""){
-        usuario.style.borderColor="red";
+    if (sexo.value==""){
+        sexo.style.borderColor="red";
         ohSnap('Ingresar el sexo...', {color: 'red'});  // alert will have class 'alert-color'
         lVali = false;
     }
-    if (clave.value==""){
-        clave.style.borderColor="red";
+    if (ciudad.value==""){
+        ciudad.style.borderColor="red";
         ohSnap('Ingresar la ciudad...', {color: 'red'});  // alert will have class 'alert-color'
         lVali = false;
     }
@@ -38,9 +38,9 @@ function validateA(e){
         e.preventDefault();
         formulario  = document.getElementById('frmAprendizModificar');
         nombre      = document.getElementById('txtNombreAM');
-        apellido    = document.getElementById('txtFechanM');
-        usuario     = document.getElementById('txtSexoM');
-        clave       = document.getElementById('txtCiudadM');
+        fecha    = document.getElementById('txtFechanM');
+        sexo     = document.getElementById('txtSexoM');
+        ciudad       = document.getElementById('txtCiudadM');
         
         lVali = true;
         
@@ -49,18 +49,18 @@ function validateA(e){
             ohSnap('Ingresar el nombre...', {color: 'red'});  // alert will have class 'alert-color'
             lVali = false;
         }
-        if (apellido.value==""){
-            apellido.style.borderColor="red";
+        if (fecha.value==""){
+            fecha.style.borderColor="red";
             ohSnap('Ingresar el fecha...', {color: 'red'},{duration:1000});  // alert will have class 'alert-color'
             lVali = false;
         }
-        if (usuario.value==""){
-            usuario.style.borderColor="red";
+        if (sexo.value==""){
+            sexo.style.borderColor="red";
             ohSnap('Ingresar el sexo...', {color: 'red'});  // alert will have class 'alert-color'
             lVali = false;
         }
-        if (clave.value==""){
-            clave.style.borderColor="red";
+        if (ciudad.value==""){
+            ciudad.style.borderColor="red";
             ohSnap('Ingresar la ciudad...', {color: 'red'});  // alert will have class 'alert-color'
             lVali = false;
         }

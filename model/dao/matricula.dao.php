@@ -68,25 +68,26 @@
         }
 
 
-    public function mldUpdateMatricula(){
-        $sql  = "CALL spUpdateMatricula (?, ?, ?, ?, ?, ?, ?);";
-        $estado = false;
-        try {
-            $objCon = new Conexion();
-            $stmt = $objCon->getConect() -> prepare($sql);
-            $stmt ->  bindParam(1,  $this -> codem,      PDO::PARAM_INT);
-            $stmt ->  bindParam(2,  $this -> nombrec,      PDO::PARAM_STR);
-            $stmt ->  bindParam(3,  $this -> costo,  PDO::PARAM_STR);
-            $stmt ->  bindParam(4,  $this -> estado,      PDO::PARAM_STR);
-            $stmt ->  bindParam(5,  $this -> codepro,  PDO::PARAM_STR);
-            $stmt ->  bindParam(6,  $this -> codeapr,  PDO::PARAM_STR);
-            $stmt ->  bindParam(7,  $this -> codepro,  PDO::PARAM_STR);
-
-            $estado = $stmt -> execute();
-        } catch (PDOException $e) {
-            echo "Error al modfiicar matricula " . $e ->getMessage();
+        public function mldUpdateMatricula(){
+            $sql  = "CALL spUpdateMatricula (?, ?, ?, ?, ?, ?, ?);";
+            $estado = false;
+            try {   
+                $objCon = new Conexion();
+                $stmt = $objCon->getConect() -> prepare($sql);
+                $stmt ->  bindParam(1,  $this -> codem,      PDO::PARAM_INT);
+                $stmt ->  bindParam(2,  $this -> nombrec,      PDO::PARAM_STR);
+                $stmt ->  bindParam(3,  $this -> costo,  PDO::PARAM_STR);
+                $stmt ->  bindParam(4,  $this -> estado,      PDO::PARAM_STR);
+                $stmt ->  bindParam(5,  $this -> codepro,  PDO::PARAM_STR);
+                $stmt ->  bindParam(6,  $this -> codeapr,  PDO::PARAM_STR);
+                $stmt ->  bindParam(7,  $this -> fecham,  PDO::PARAM_STR);
+    
+                $estado = $stmt -> execute();
+            } catch (PDOException $e) {
+                echo "Error al modfiicar aprendiz " . $e ->getMessage();
+            }
+            return $estado;
         }
-        return $estado;
-    }
+
 }//END CLASS
 ?>

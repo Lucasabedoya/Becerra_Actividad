@@ -49,7 +49,7 @@ function getDataM(obj){
     let fecham = obj.children[6].innerHTML;
 
     document.getElementById("txtCodigoMM").value = codem;
-    document.getElementById("txtNombreCM").value = nombrec;
+    document.getElementById("txtNombreMM").value = nombrec;
     document.getElementById("txtCostoM").value = costo;
     document.getElementById("txtEstadoM").value = estado;
     document.getElementById("txtCodeproM").value = codepro;

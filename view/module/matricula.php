@@ -71,8 +71,8 @@
                 </div>
                 <!-- ./col -->
             </div>
-            </div>
-            <div>
+          <br>
+            
             <div class="col-lg-6 col-xs-6">
                 <!-- texto box -->
                     <div class="input-group">
@@ -85,8 +85,7 @@
             <div class="col-lg-6 col-xs-6">
                 <!-- texto box -->
                     <div class="input-group">
-                        <span class="input-group-addon"> Fecha Matricula
-                        </span>
+                        <span class="input-group-addon"> Fecha Matricula</span>
                         <input type="date" class="form-control" id="txtFecham" name="txtFecham" >
                     </div>
                 </div>
@@ -94,7 +93,6 @@
               
             <!-- /.box-body -->
             <div class="box-footer">
-              
                 <button class="btn btn-app bg-blue" onclick="validateM(event)">
                     <i class="fa fa-save "></i> Guardar
                 </button>
@@ -196,15 +194,14 @@
   <div class="modal-dialog">
     <div class="modal-content">
 
-      <!-- Modal Header -->
-      <div class="modal-header bg bg-blue">
+    <div class="modal-header bg bg-blue">
         <h4 class="modal-title">Modificar Matricula</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
+        </div>
 
-      <!-- Modal body -->
-      <div class="modal-body">
-        <form method="post" id="frmUsuarioModificar">
+        <!-- Modal body -->
+        <div class="modal-body">
+        <form method="post" id="frmMatriculaModificar">
           <input type="hidden" name="txtCodigoMM" id="txtCodigoMM">
           <div class="box-body">
             <div class="row">
@@ -212,7 +209,7 @@
                 <!-- texto box -->
                     <div class="input-group">
                         <span class="input-group-addon">Nombre Centro</span>
-                        <input type="text" class="form-control" id="txtNombreCM" name="txtNombreCM">
+                        <input type="text" class="form-control" id="txtNombreMM" name="txtNombreMM">
                         <span class="input-group-addon">N</span>
                     </div>
                 </div>
@@ -220,9 +217,9 @@
                 <div class="col-lg-6 col-xs-6">
                 <!-- texto box -->
                     <div class="input-group">
-                        <span class="input-group-addon">Costo</span>
+                        <span class="input-group-addon">Costo</span> 
                         <input type="text" class="form-control" id="txtCostoM" name="txtCostoM">
-                        <span class="input-group-addon">A</span>
+                        <span class="input-group-addon">C</span>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -242,13 +239,13 @@
                 <!-- texto box -->
                     <div class="input-group">
                         <span class="input-group-addon">Codigo Programa</span>
-                        <input type="text" class="form-control" id="txtCodeproM" name="txtCodeproM" >
-                        <span class="input-group-addon"><i class="fa">P</i></span>
+                        <input type="text" class="form-control" id="txtCodeproM" name="txtCodeproM">
+                        <span class="input-group-addon"><i class="fa"></i>P</span>
                     </div>
                 </div>
                 <!-- ./col -->
             </div>
-            </div>
+            <br>
             <div class="row">
                 <div class="col-lg-6 col-xs-6">
                 <!-- texto box -->
@@ -263,43 +260,42 @@
                 <!-- texto box -->
                     <div class="input-group">
                         <span class="input-group-addon">Fecha Matricula</span>
-                        <input type="date" class="form-control" id="txtFechamM" name="txtClaveM">
+                        <input type="date" class="form-control" id="txtFechamM" name="txtFechamM">
                     </div>
                 </div>
-                <!-- ./col -->
             </div>
-
-
-            
             <!-- /.box-body -->
 
             <!-- /.box-footer-->
         </form>
-      </div>
+      </div>  
 
-      <!-- Modal footer -->
-      <div class="modal-footer">
+        <!-- Modal footer -->
+        <div class="modal-footer">
         <div>
-          <button class="btn btn-app float-left bg-blue" onclick="validateModify(event)">
+          <button class="btn btn-app float-left bg-blue" onclick="validateMModify(event)">
               <i class="fa fa-save"></i> Guardar
           </button>
           <?php
-            if (isset($_POST['txtNombreM'])){
-              $objCtrUser = new UserController();
-              $objCtrUser -> setUpdateUser(
-                $_POST['txtCodigoM'],
-                $_POST['txtUsuarioM'],
-                $_POST['txtClaveM'],
-                $_POST['txtNombreM'],
-                $_POST['txtApellidoM']
+            if (isset($_POST['txtNombreMM'])){
+              $objCtrUser = new MatriculaController();
+              $objCtrUser -> setUpdateMatricula(
+                $_POST['txtCodigoMM'],
+                $_POST['txtNombreMM'],
+                $_POST['txtCostoM'],
+                $_POST['txtEstadoM'],
+                $_POST['txtCodeproM'],
+                $_POST['txtCodeaprM'],
+                $_POST['txtFechamM']
               );
-              include_once 'view/module/user.php'; 
+              include_once 'view/module/matricula.php'; 
             }
           ?>
           <button class="btn btn-app bg-blue" data-dismiss="modal">
               <i class="fa fa-close"></i> Salir
           </button>
         </div>
+      </div>
       </div>
 
     </div>
