@@ -55,7 +55,10 @@
                 <!-- texto box -->
                     <div class="input-group">
                         <span class="input-group-addon">Sexo</span>
-                        <input type="text" class="form-control" id="txtSexo" name="txtSexo">
+                        <select type="text" class="form-control" id="txtSexo" name="txtSexo">
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                        </select>
                         <span class="input-group-addon"><i class="fa">S</i></span>
                     </div>
                 </div>
@@ -205,7 +208,10 @@
                 <!-- texto box -->
                     <div class="input-group">
                         <span class="input-group-addon">Sexo</span>
-                        <input type="text" class="form-control" id="txtSexoM" name="txtSexoM">
+                        <select type="text" class="form-control" id="txtSexoM" name="txtSexoM">
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                        </select>
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
                     </div>
                 </div>
