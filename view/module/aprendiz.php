@@ -53,11 +53,14 @@
             <div class="row">
                 <div class="col-lg-6 col-xs-6">
                 <!-- texto box -->
-                    <div class="input-group">
-                        <span class="input-group-addon">Sexo</span>
-                        <input type="text" class="form-control" id="txtSexo" name="txtSexo">
-                        <span class="input-group-addon"><i class="fa">S</i></span>
-                    </div>
+                <div class="input-group">
+                  <span class="input-group-addon">Sexo</span>
+                  <select class="form-control" id="txtSexo" name="txtSexo" onchange="fillBook();">
+                    <option value="" selected disabled hidden></option>
+                    <option value="1">Mujer</option>
+                    <option value="2">Hombre</option>
+                  </select>
+                </div>
                 </div>
                 <!-- ./col -->
                 <div class="col-lg-6 col-xs-6">
@@ -190,7 +193,7 @@
                     </div>
                 </div>
                 <!-- ./col -->
-                <div class="col-lg-6 col-xs-6">
+                <div class="col-lg-6 col-xs-6">`
                 <!-- texto box -->
                     <div class="input-group">
                         <span class="input-group-addon">Fecha Nacimiento</span> 
@@ -203,11 +206,14 @@
             <div class="row">
                 <div class="col-lg-6 col-xs-6">
                 <!-- texto box -->
-                    <div class="input-group">
-                        <span class="input-group-addon">Sexo</span>
-                        <input type="text" class="form-control" id="txtSexoM" name="txtSexoM">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                    </div>
+                  <div class="input-group">
+                    <span class="input-group-addon">Sexo</span>
+                     <select class="form-control" id="txtSexoM" name="txtSexoM" onchange="fillBook();">
+                        <option value="" selected disabled hidden></option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                      </select>
+                  </div>
                 </div>
                 <!-- ./col -->
                 <div class="col-lg-6 col-xs-6">

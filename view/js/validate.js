@@ -1,6 +1,6 @@
 function validate(e){
     e.preventDefault();
-    formulario  = document.getElementById('frmUsuario');
+    form  = document.getElementById('frmUsuario');
     nombre      = document.getElementById('txtNombre');
     apellido    = document.getElementById('txtApellido');
     usuario     = document.getElementById('txtUsuario');
@@ -8,7 +8,7 @@ function validate(e){
     
     lVali = true;
     
-    if (nombre.value==""){
+    if (form.value==""){
         nombre.style.borderColor="red";
         ohSnap('Ingresar el nombre...', {color: 'red'});  // alert will have class 'alert-color'
         lVali = false;
