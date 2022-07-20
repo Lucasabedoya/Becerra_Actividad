@@ -53,14 +53,15 @@
             <div class="row">
                 <div class="col-lg-6 col-xs-6">
                 <!-- texto box -->
-                <div class="input-group">
-                  <span class="input-group-addon">Sexo</span>
-                  <select class="form-control" id="txtSexo" name="txtSexo" onchange="fillBook();">
-                    <option value="" selected disabled hidden></option>
-                    <option value="1">Mujer</option>
-                    <option value="2">Hombre</option>
-                  </select>
-                </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Sexo</span>
+                        <select type="text" class="form-control" id="txtSexo" name="txtSexo">
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                        </select>
+                        <span class="input-group-addon"><i class="fa">S</i></span>
+                    </div>
+
                 </div>
                 <!-- ./col -->
                 <div class="col-lg-6 col-xs-6">
@@ -206,14 +207,14 @@
             <div class="row">
                 <div class="col-lg-6 col-xs-6">
                 <!-- texto box -->
-                  <div class="input-group">
-                    <span class="input-group-addon">Sexo</span>
-                     <select class="form-control" id="txtSexoM" name="txtSexoM" onchange="fillBook();">
-                        <option value="" selected disabled hidden></option>
-                        <option value="01">01</option>
-                        <option value="02">02</option>
-                      </select>
-                  </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Sexo</span>
+                        <select type="text" class="form-control" id="txtSexoM" name="txtSexoM">
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                        </select>
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    </div>
                 </div>
                 <!-- ./col -->
                 <div class="col-lg-6 col-xs-6">
